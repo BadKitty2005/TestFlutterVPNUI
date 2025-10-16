@@ -7,6 +7,7 @@ import 'all_tab.dart';
 import 'my_tab.dart';
 import 'favorites_tab.dart';
 import 'empty_state.dart';
+import 'dart:math' as math;
 
 class AccessPointScreen extends StatelessWidget {
   const AccessPointScreen({Key? key}) : super(key: key);
@@ -17,7 +18,7 @@ class AccessPointScreen extends StatelessWidget {
 
     final bgColor = Color(0xFF1A2838);
     final screenW = MediaQuery.of(context).size.width;
-    final contentWidth = (screenW - 32) < 343 ? (screenW - 32) : 343.0;
+    final contentWidth = math.min(343.0, screenW - 32.0);
 
     Widget bodyForTab() {
       final filtered = prov.filteredForTab(prov.activeTab);
