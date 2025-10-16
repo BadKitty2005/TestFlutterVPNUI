@@ -83,10 +83,8 @@ class AccessPointScreen extends StatelessWidget {
                 child: CustomTabBar(width: contentWidth, height: 40),
               ),
               SizedBox(height: 16),
-              // Search
               Center(child: SearchBarWidget(width: contentWidth)),
-              SizedBox(height: 12),
-              // content area
+              SizedBox(height: 20),
               Expanded(
                 child: Column(
                   children: [
